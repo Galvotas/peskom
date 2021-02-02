@@ -1,0 +1,45 @@
+.subfooter__img__wrapper {
+    display: flex;
+    min-height: 300px; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+    .subfooter__img {
+        min-width: 250px;
+        width: calc(100% / 5);
+        min-height: 300px;
+        max-width: 50%;
+        flex: 1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &:nth-child(1) {
+            background-image: url(images/subfooter_images/AA_2017-10-28_006.png);
+        }
+        &:nth-child(2) {
+            background-image: url(images/subfooter_images/AA_2017-10-28_012.png);
+        }
+        &:nth-child(3) {
+            background-image: url(images/subfooter_images/CommmGKA.png);
+        }
+        &:nth-child(4) {
+            background-image: url(images/subfooter_images/AA_2017-10-28_024.png);
+        }
+        &:nth-child(5) {
+            background-image: url(images/subfooter_images/AA_2017-10-28_041.png);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 560px) {
+    .subfooter__img__wrapper {
+        .subfooter__img {
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+    }
+}
+
+
