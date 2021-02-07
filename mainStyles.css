@@ -343,20 +343,7 @@
 }
 
 .subheader__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex: 1;
-      flex: 1;
+  padding: 1rem 0;
 }
 
 .subheader__content .sub__first, .subheader__content .sub__second, .subheader__content .sub__three {
@@ -378,7 +365,7 @@
 .subheader__content .sub__first .sub__icon, .subheader__content .sub__second .sub__icon, .subheader__content .sub__three .sub__icon {
   margin: auto 0;
   margin-right: 26px;
-  width: 45px;
+  min-width: 45px;
   height: 50px;
   background-position: center;
   background-size: contain;
@@ -408,19 +395,6 @@
 
 .subicon3 {
   background-image: url(images/subheader_icons/Vector-2.png);
-}
-
-@media only screen and (max-width: 420px) {
-  .subheader__content {
-    display: block;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
-  }
-  .sub__first:not(:last-child), .sub__second:not(:last-child), .sub__three:not(:last-child) {
-    margin-bottom: 30px;
-  }
 }
 
 .about__us {
@@ -480,19 +454,19 @@
 }
 
 .about__us .about__us__media .img__card:nth-child(1) {
-  background-image: url(images/aboutus/IMG_1002.png);
+  background-image: url(images/aboutus/IMG_1002.jpg);
 }
 
 .about__us .about__us__media .img__card:nth-child(2) {
-  background-image: url(images/aboutus/JMP_7677.png);
+  background-image: url(images/aboutus/JMP_7677.jpg);
 }
 
 .about__us .about__us__media .img__card:nth-child(3) {
-  background-image: url(images/aboutus/JMP_7791.png);
+  background-image: url(images/aboutus/JMP_7791.jpg);
 }
 
 .about__us .about__us__media .img__card:nth-child(4) {
-  background-image: url(images/aboutus/JMP_8216.png);
+  background-image: url(images/aboutus/JMP_8216.jpg);
 }
 
 @media only screen and (max-width: 680px) {
@@ -517,7 +491,7 @@
 
 .about__me__img {
   min-width: 560px;
-  background-image: url(images/aboutme/JMP_7700.png);
+  background-image: url(images/aboutme/JMP_7700.jpg);
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
@@ -690,14 +664,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.reviewer__details .profile__img.person1 {
-  background-image: url(images/reviews_media/person1.png);
-}
-
-.reviewer__details .profile__img.person2 {
-  background-image: url(images/reviews_media/person2.png);
 }
 
 .reviewer__details .reviewer__info {
@@ -899,55 +865,34 @@
 }
 
 .subfooter__img__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   min-height: 300px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .subfooter__img__wrapper .subfooter__img {
-  min-width: 250px;
-  width: calc(100% / 5);
-  min-height: 300px;
-  max-width: 50%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  min-height: inherit;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .subfooter__img__wrapper .subfooter__img:nth-child(1) {
-  background-image: url(images/subfooter_images/AA_2017-10-28_006.png);
+  background-image: url(images/subfooter_images/AA_2017-10-28_006.jpg);
 }
 
 .subfooter__img__wrapper .subfooter__img:nth-child(2) {
-  background-image: url(images/subfooter_images/AA_2017-10-28_012.png);
+  background-image: url(images/subfooter_images/AA_2017-10-28_012.jpg);
 }
 
 .subfooter__img__wrapper .subfooter__img:nth-child(3) {
-  background-image: url(images/subfooter_images/CommmGKA.png);
+  background-image: url(images/subfooter_images/CommmGKA.jpg);
 }
 
 .subfooter__img__wrapper .subfooter__img:nth-child(4) {
-  background-image: url(images/subfooter_images/AA_2017-10-28_024.png);
+  background-image: url(images/subfooter_images/AA_2017-10-28_024.jpg);
 }
 
 .subfooter__img__wrapper .subfooter__img:nth-child(5) {
-  background-image: url(images/subfooter_images/AA_2017-10-28_041.png);
-}
-
-@media only screen and (max-width: 560px) {
-  .subfooter__img__wrapper .subfooter__img {
-    max-width: 100%;
-    min-width: 100%;
-  }
+  background-image: url(images/subfooter_images/AA_2017-10-28_041.jpg);
 }
 
 .contact__wrapper {
@@ -1270,6 +1215,18 @@ button:active, .contact__btn:active {
   width: fit-content !important;
   color: #fff !important;
   text-decoration: none !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield !important;
 }
 
 @media only screen and (max-width: 1200px) {

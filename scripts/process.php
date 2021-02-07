@@ -1,16 +1,18 @@
 <?php 
 /* Configuration */
-$subject = 'Peskom.lt Form'; // Set email subject line here
+$subject = 'Peskom.lt Forma'; // Set email subject line here
 $mailto  = 'sarunas@peskom.lt'; // Email address to send the form to
 /* END Configuration */
 $message    = $_POST['message'];
 $name     	= $_POST['name'];
+$phone     	= $_POST['phone'];
 $email          = $_POST['email'];
 $timestamp 	= date("F jS Y, h:iA.", time());
 
 // HTML for email to send submission details
 $body = "
 <br>
+<p><b>Phone Nr: $phone<br>
 <p><b>Message: $message<br>
 <p><b>Name</b>: $name <br>
 <b>Email</b>: $email<br>
@@ -18,7 +20,7 @@ $body = "
 ";
 
 // Success Message
-$success = "Užklausa sėkmingai išsiūsta.";
+$success = "Užklausa sėkmingai išsiųsta.";
 
 $headers = "From: $name <$email> \r\n";
 $headers .= "Reply-To: $email \r\n";
@@ -29,6 +31,6 @@ $message = "<html><body>$body</body></html>";
 if (mail($mailto, $subject, $message, $headers)) {
     echo "$success"; // success
 } else {
-    echo 'Nepavyko išsiūsti užklausos.'; // failure
+    echo 'Nepavyko išsiųsti užklausos.'; // failure
 }
 ?>

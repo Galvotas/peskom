@@ -30,15 +30,9 @@ $secondaryFont: 'Gilroy', sans-serif;
 
 
 .subheader__content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-basis: 300px;
-    flex-grow: 1;
-    flex: 1;
+    padding: 1rem 0;
     .sub__first, .sub__second, .sub__three {
         display: flex;
-
         .sub__info {
             display: flex;
             flex-direction: column;
@@ -46,11 +40,11 @@ $secondaryFont: 'Gilroy', sans-serif;
        .sub__icon {
            margin: auto 0;
            margin-right: 26px;
-           width: 45px;
+           min-width: 45px;
            height: 50px;
            background-position: center;
            background-size: contain;
-           background-repeat: no-repeat;         
+           background-repeat: no-repeat;    
        }
        .subheader__content__top {
            font-family: 'Gilroy', sans-serif !important;
@@ -76,18 +70,7 @@ $secondaryFont: 'Gilroy', sans-serif;
     background-image: url(images/subheader_icons/Vector-2.png);
 }
 
-@media only screen and (max-width: 420px) {
-   .subheader__content {
-       display: block;
-       width: fit-content;
-       margin: 0 auto;
-   }
-   .sub__first, .sub__second, .sub__three {
-       &:not(:last-child) {
-           margin-bottom: 30px;
-       }
-   }
-}
+
 
 
 
